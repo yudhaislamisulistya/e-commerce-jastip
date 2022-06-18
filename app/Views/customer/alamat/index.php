@@ -15,7 +15,7 @@
                 <ul class="breadcrumb float-md-right">
                     <li class="breadcrumb-item"><a href="<?= route_to('admin_dashboard') ?>"><i
                                 class="zmdi zmdi-home"></i> Jastip</a></li>
-                    <li class="breadcrumb-item active">Daftar Alternatif atau Department Store</li>
+                    <li class="breadcrumb-item active">Daftar Alternatif atau Toko Swalayan</li>
                 </ul>
             </div>
         </div>
@@ -50,7 +50,7 @@
                                     data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i
                                         class="zmdi zmdi-more"></i> </a>
                                 <ul class="dropdown-menu dropdown-menu-right slideUp float-right">
-                                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#addModal">Tambah Alternatif atau Department Store</a></li>
+                                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#addModal">Tambah Alternatif atau Toko Swalayan</a></li>
                                 </ul>
                             </li>
                             <li class="remove">

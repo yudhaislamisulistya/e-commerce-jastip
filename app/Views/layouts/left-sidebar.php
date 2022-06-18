@@ -63,7 +63,7 @@
             </li>
             <li class="header">Other</li>
             <li> <a href="<?= route_to('entrepreneur_list_customer_index') ?>"><i class="zmdi zmdi-pin-account"></i><span>Customer</span></a>
-            <li> <a href="<?= route_to('entrepreneur_list_department_store_index') ?>"><i class="zmdi zmdi-account"></i><span>Department Store</span></a>
+            <li> <a href="<?= route_to('entrepreneur_list_department_store_index') ?>"><i class="zmdi zmdi-account"></i><span>DToko Swalayan</span></a>
         </ul>
     </div>
 </aside>

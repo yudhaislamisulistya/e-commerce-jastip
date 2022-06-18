@@ -15,7 +15,7 @@
                 <ul class="breadcrumb float-md-right">
                     <li class="breadcrumb-item"><a href="<?= route_to('admin_dashboard') ?>"><i
                                 class="zmdi zmdi-home"></i> Jastip</a></li>
-                    <li class="breadcrumb-item active">Daftar Alternatif atau Department Store</li>
+                    <li class="breadcrumb-item active">Daftar Alternatif atau Toko Swalayan</li>
                 </ul>
             </div>
         </div>
@@ -44,13 +44,13 @@
                 <?php }?>
                 <div class="card">
                     <div class="header">
-                        <h2><strong>Daftar Alternatif Atau</strong> Department Store </h2>
+                        <h2><strong>Daftar Alternatif Atau</strong> Toko Swalayan </h2>
                         <ul class="header-dropdown">
                             <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle"
                                     data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i
                                         class="zmdi zmdi-more"></i> </a>
                                 <ul class="dropdown-menu dropdown-menu-right slideUp float-right">
-                                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#addModal">Tambah Alternatif atau Department Store</a></li>
+                                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#addModal">Tambah Alternatif atau Toko Swalayan</a></li>
                                 </ul>
                             </li>
                             <li class="remove">
@@ -65,7 +65,7 @@
                                     <tr>
                                         <th>Nomor</th>
                                         <th>Kode Alternatif</th>
-                                        <th>Nama Alternatif / Department Store</th>
+                                        <th>Nama Alternatif / Toko Swalayan</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -101,21 +101,21 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Tambah Alternatif atau Department Store</h5>
+                        <h5 class="modal-title">Tambah Alternatif atau Toko Swalayan</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Kode Department Store</label>
+                            <label>Kode Toko Swalayan</label>
                             <input type="text" class="form-control" name="kode_department_store"
-                                placeholder="Kode Department Store">
+                                placeholder="Kode Toko Swalayan">
                         </div>
                         <div class="form-group">
-                            <label>Nama Department Store</label>
+                            <label>Nama Toko Swalayan</label>
                             <input type="text" class="form-control" name="nama_department_store"
-                                placeholder="Nama Department Store">
+                                placeholder="Nama Toko Swalayan">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -135,7 +135,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ubah Alternatif atau Department Store</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Ubah Alternatif atau Toko Swalayan</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -171,14 +171,14 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Hapus Alternatif atau Department Store Ini ?</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Hapus Alternatif atau Toko Swalayan Ini ?</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
 
-                        <h4>Apakah Kamu Ingin Alternatif atau Department Store Ini?</h4>
+                        <h4>Apakah Kamu Ingin Alternatif atau Toko Swalayan Ini?</h4>
 
                     </div>
                     <div class="modal-footer">

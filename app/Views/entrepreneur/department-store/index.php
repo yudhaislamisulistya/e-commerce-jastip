@@ -15,7 +15,7 @@
                 <ul class="breadcrumb float-md-right">
                     <li class="breadcrumb-item"><a href="<?= route_to('admin_dashboard') ?>"><i
                                 class="zmdi zmdi-home"></i> Jastip</a></li>
-                    <li class="breadcrumb-item active">Daftar Alternatif atau Department Store</li>
+                    <li class="breadcrumb-item active">Daftar Alternatif atau Toko Swalayan</li>
                 </ul>
             </div>
         </div>
@@ -44,13 +44,13 @@
                 <?php }?>
                 <div class="card">
                     <div class="header">
-                        <h2><strong>Daftar Alternatif Atau</strong> Department Store </h2>
+                        <h2><strong>Daftar Alternatif Atau</strong> Toko Swalayan </h2>
                         <ul class="header-dropdown">
                             <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle"
                                     data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i
                                         class="zmdi zmdi-more"></i> </a>
                                 <ul class="dropdown-menu dropdown-menu-right slideUp float-right">
-                                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#addModal">Tambah Alternatif atau Department Store</a></li>
+                                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#addModal">Tambah Alternatif atau Toko Swalayan</a></li>
                                 </ul>
                             </li>
                             <li class="remove">
@@ -65,7 +65,7 @@
                                     <tr>
                                         <th>Nomor</th>
                                         <th>Kode Alternatif</th>
-                                        <th>Nama Alternatif / Department Store</th>
+                                        <th>Nama Alternatif / Toko Swalayan</th>
                                     </tr>
                                 </thead>
                                 <tbody>

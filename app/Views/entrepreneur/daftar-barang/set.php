@@ -73,7 +73,7 @@
                                     <thead>
                                         <tr>
                                             <th>Kode</th>
-                                            <th>Department Store</th>
+                                            <th>Toko Swalayan</th>
                                             <?php foreach (get_criterias() as $key => $value) { ?>
                                                 <th><?= $value->nama_kriteria ?></th>
                                             <?php } ?>

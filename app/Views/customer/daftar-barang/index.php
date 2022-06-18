@@ -254,6 +254,14 @@
                                 placeholder="Jumlah Beli">
                         </div>
                         <div class="form-group">
+                            <label>Kategori</label>
+                            <select name="kategori" id="kategori">
+                                <option value="Alat Rumah Tangga">Alat Rumah Tangga</option>
+                                <option value="Aksesoris">Aksesoris</option>
+                                <option value="Pakaian">Pakaian</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label>Catatan</label>
                             <textarea name="catatan" cols="30" rows="10" class="form-control" placeholder="Catatan Anda"></textarea>
                         </div>
