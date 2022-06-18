@@ -63,7 +63,7 @@
             </li>
             <li class="header">Other</li>
             <li> <a href="<?= route_to('entrepreneur_list_customer_index') ?>"><i class="zmdi zmdi-pin-account"></i><span>Customer</span></a>
-            <li> <a href="<?= route_to('entrepreneur_list_department_store_index') ?>"><i class="zmdi zmdi-account"></i><span>DToko Swalayan</span></a>
+            <li> <a href="<?= route_to('entrepreneur_list_department_store_index') ?>"><i class="zmdi zmdi-account"></i><span>Toko Swalayan</span></a>
         </ul>
     </div>
 </aside>
@@ -95,7 +95,7 @@
             <li> <a href="<?= route_to('admin_courier_service_index') ?>"><i class="zmdi zmdi-bus"></i><span>Usaha Jastip</span></a>
             <li> <a href="<?= route_to('admin_criteria_index') ?>"><i class="zmdi zmdi-code"></i><span>Kriteria</span></a>
             <li> <a href="<?= route_to('admin_preference_value_index') ?>"><i class="zmdi zmdi-fire"></i><span>Nilai Prefensi</span></a>
-            <li> <a href="<?= route_to('admin_department_store_index') ?>"><i class="zmdi zmdi-store"></i><span>Departement Store</span></a>
+            <li> <a href="<?= route_to('admin_department_store_index') ?>"><i class="zmdi zmdi-store"></i><span>Toko Swalayan</span></a>
             </li>
             <li class="header">Other</li>
             <li> <a href="<?= route_to('admin_customer_list_index') ?>"><i class="zmdi zmdi-pin-account"></i><span>Customer</span></a>

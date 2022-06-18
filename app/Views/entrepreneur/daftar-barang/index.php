@@ -167,6 +167,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php
+                                        $j = 1;
+                                    ?>
                                     <?php foreach (get_selection_by_code_selection() as $key => $value) { ?>
                                         <?php
                                         $items = explode('-', $value->id_item);
@@ -174,7 +177,7 @@
                                         <?php for ($i=0; $i < count($items); $i++) { ?> 
                                             <?php foreach (get_items_by_id($items[$i]) as $key2 => $value2) { ?>
                                                 <tr>
-                                                    <td><?= ++$key2 ?></td>
+                                                    <td><?= ($j) ?></td>
                                                     <td><?= get_user_by_id($value2->id_user)['nama_lengkap'] ?></td>
                                                     <td><?= $value2->nama_barang ?></td>
                                                     <td><?= $value2->jumlah_beli ?></td>
@@ -217,7 +220,7 @@
                                                         <?php } ?>
                                                     </td>
                                                 </tr>
-                                            <?php } ?>
+                                            <?php $j++; } ?>
                                         <?php }?>
                                     <?php } ?>
                                 </tbody>

@@ -255,7 +255,7 @@
                         </div>
                         <div class="form-group">
                             <label>Kategori</label>
-                            <select name="kategori" id="kategori">
+                            <select class="form-control" name="kategori" id="kategori">
                                 <option value="Alat Rumah Tangga">Alat Rumah Tangga</option>
                                 <option value="Aksesoris">Aksesoris</option>
                                 <option value="Pakaian">Pakaian</option>
