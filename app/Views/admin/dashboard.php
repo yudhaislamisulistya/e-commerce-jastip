@@ -143,7 +143,7 @@
                                     <tr>
                                         <th>Nomor</th>
                                         <th>Kode Alternatif</th>
-                                        <th>Nama Alternatif / Department Store</th>
+                                        <th>Nama Alternatif / Toko Swalayan</th>
                                     </tr>
                                 </thead>
                                 <tbody>
