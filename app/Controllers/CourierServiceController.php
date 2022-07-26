@@ -65,7 +65,11 @@ class CourierServiceController extends BaseController
                 $this->itemModel->where(['id_item' => $items[$i]])->set(['status' => 12])->update();
             }
 
-            return redirect()->to(base_url('admin/courier-service'))->with('status', 'succes');
+            if (session()->get('role') == '3') {
+                return redirect()->to(base_url('admin/courier-service'))->with('status', 'succes');
+            }else{
+                return redirect()->to(base_url('entrepreneur/daftar-barang'))->with('status', 'succes');
+            }
         } catch (\Exception $th) {
             return redirect()->to(base_url('admin/courier-service'))->with('status', 'failed');
         }

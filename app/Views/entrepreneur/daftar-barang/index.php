@@ -103,7 +103,7 @@
                                                 <?php if($value->status == 1){ ?>
                                                     <a href="<?= route_to('entrepreneur_selection_index', $value->id_user) ?>" class="btn btn-primary btn-sm">Set</a>
                                                 <?php }else if($value->status == 11){ ?>
-                                                    <button class="btn btn-sm btn-secondary">Menunggu Approve Admin</button>
+                                                    <a href="<?= route_to('admin_courier_service_check', get_selection_by_id_item($value->id_item)['kode_seleksi']) ?>" class="btn btn-sm btn-info">Cek Rekomndasi</a>
                                                 <?php }else if($value->status == 12){ ?>
                                                     <?php
                                                         $items .= $value->id_item;    
@@ -205,7 +205,7 @@
                                                         <?php if($value2->status == 1){ ?>
                                                             <a href="<?= route_to('entrepreneur_selection_index', $value2->id_user) ?>" class="btn btn-primary btn-sm">Set</a>
                                                         <?php }else if($value2->status == 11){ ?>
-                                                            <button class="btn btn-sm btn-secondary">Menunggu Approve Admin</button>
+                                                            <a href="<?= route_to('admin_courier_service_check', $value->kode_seleksi) ?>" class="btn btn-sm btn-info">Cek Rekomndasi</a>
                                                         <?php }else if($value2->status == 12){ ?>
                                                             <a href="<?= route_to('entrepreneur_selection_set_price', $value->id_item) ?>" class="btn btn-primary btn-sm">Set Biaya</a>
                                                         <?php }else if($value2->status == 13){ ?>

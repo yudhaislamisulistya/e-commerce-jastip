@@ -21,6 +21,7 @@ class ItemModel extends Model
         'harga_barang',
         'total_harga_per_barang',
         'catatan',
+        'kategori',
         'status'
     ];
 

@@ -317,8 +317,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php
-                                        ?>
                                         <?php foreach (get_department_store() as $key => $value) { ?>
                                             <tr>
                                                 <td><?= $value->kode_department_store ?></td>

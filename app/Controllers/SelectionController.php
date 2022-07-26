@@ -53,6 +53,7 @@ class SelectionController extends BaseController
                 }
             }
 
+
             $this->itemModel->where(['id_user' => $data['id_user'], 'status' => 1])->set(['status' => 11])->update();
             return redirect()->to(base_url('entrepreneur/daftar-barang'))->with('status', 'success');
         } catch (\Exception $th) {

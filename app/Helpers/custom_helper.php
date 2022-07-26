@@ -136,6 +136,7 @@ function get_selection_by_code_selection(){
     return $data;
 }
 
+
 function get_selection_by_code_selection_and_id_user($id_user){
     $selectionModel = new SelectionModel();
     $data = $selectionModel
@@ -289,6 +290,13 @@ function get_transaction_by_status($status){
     $data = $transactionModel->where('transaction_status', $status)
         ->get()
         ->getResult();
+    return $data;
+}
+
+function get_selection_by_id_item($id_item){
+    $selectionModel = new SelectionModel();
+    $data = $selectionModel->where('id_item', $id_item)
+        ->first();
     return $data;
 }
 

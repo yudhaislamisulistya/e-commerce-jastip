@@ -68,6 +68,7 @@
                                         <th>Jumlah Beli</th>
                                         <th>Catatan</th>
                                         <th>Status</th>
+                                        <th>Kategori</th>
                                         <th>Tanggal Request</th>
                                         <th>Tanggal Update</th>
                                         <th>Aksi</th>
@@ -95,12 +96,14 @@
                                                     <span class="badge badge-danger">Ditolak</span>
                                                 <?php } ?>
                                             </td>
+                                            <td><?= $value->kategori ?></td>
                                             <td><?= $value->created_at ?></td>
                                             <td><?= $value->updated_at ?></td>
                                             <td>
                                                 <a href="#" class="btn btn-info btn-sm btn-edit"
                                                         data-id="<?= $value->id_item;?>"
                                                         data-nama-barang="<?= $value->nama_barang?>"
+                                                        data-kategori="<?= $value->kategori?>"
                                                         data-jumlah-beli="<?= $value->jumlah_beli?>"
                                                         data-catatan="<?= $value->catatan?>">Edit</a>
                                                 <a href=" #" class="btn btn-danger btn-sm btn-delete"
@@ -244,6 +247,14 @@
                             <input type="hidden" name="id_user" value="<?= session()->get('id_user') ?>">
                         </div>
                         <div class="form-group">
+                            <label>Kategori</label>
+                            <select class="form-control" name="kategori" id="kategori">
+                                <option value="Alat Rumah Tangga">Alat Rumah Tangga</option>
+                                <option value="Aksesoris">Aksesoris</option>
+                                <option value="Pakaian">Pakaian</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label>Nama Barang</label>
                             <input type="text" class="form-control" name="nama_barang"
                                 placeholder="Nama Barang">
@@ -252,14 +263,6 @@
                             <label>Jumlah Beli</label>
                             <input type="number" class="form-control" name="jumlah_beli"
                                 placeholder="Jumlah Beli">
-                        </div>
-                        <div class="form-group">
-                            <label>Kategori</label>
-                            <select class="form-control" name="kategori" id="kategori">
-                                <option value="Alat Rumah Tangga">Alat Rumah Tangga</option>
-                                <option value="Aksesoris">Aksesoris</option>
-                                <option value="Pakaian">Pakaian</option>
-                            </select>
                         </div>
                         <div class="form-group">
                             <label>Catatan</label>
@@ -291,6 +294,14 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <input type="hidden" name="id_user" value="<?= session()->get('id_user') ?>">
+                        </div>
+                        <div class="form-group">
+                            <label>Kategori</label>
+                            <select class="form-control kategori" name="kategori" id="kategori">
+                                <option value="Alat Rumah Tangga">Alat Rumah Tangga</option>
+                                <option value="Aksesoris">Aksesoris</option>
+                                <option value="Pakaian">Pakaian</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>Nama Barang</label>
@@ -355,10 +366,11 @@
         $('.btn-edit').on('click',function(){
             const id = $(this).data('id');
             const nama_barang = $(this).data('nama-barang');
+            const kategori = $(this).data('kategori');
             const jumlah_beli = $(this).data('jumlah-beli');
             const catatan = $(this).data('catatan');
-            console.log(nama_barang);
             $('.id_item').val(id);
+            $('.kategori').val(kategori);
             $('.nama_barang').val(nama_barang);
             $('.jumlah_beli').val(jumlah_beli);
             $('.catatan').val(catatan);
