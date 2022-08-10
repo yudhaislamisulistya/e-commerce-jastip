@@ -354,7 +354,7 @@
                                                     Ranking Ke - <?= $key+1 ?>
                                                 </td>
                                             </tr>
-                                            <input type="hidden" name="kode_department_store[<?=$key+1?>]" value="<?= $value->kode_department_store ?>">
+                                            <input type="hidden" name="kode_department_store[<?=$key?>]" value="<?= $value->kode_department_store ?>">
                                             <input type="hidden" name="hasil[<?=$key?>]" value="<?= $rank_result_grand_final[$key]['nilai'] ?>">
                                             <input type="hidden" name="ranking[<?=$key?>]" value="<?= $key+1 ?>">
                                         <?php } ?>
