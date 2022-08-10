@@ -162,10 +162,10 @@
                                                                     $kode_gabungan = $kode_kriteria . '-' . $kode_sub_kriteria;
                                                                     $nama_sub_kriteria = get_sub_criteria_by_code_marge($kode_gabungan)['nama_sub_kriteria']; 
                                                                     
-                                                                    if($value2->keterangan == 1){
+                                                                    if($value2->keterangan == 2){
                                                                         $result_normalisasi = min($a_value_sub_kriteria[$key2])/$bobot;
                                                                         echo $result_normalisasi;
-                                                                    }else if($value2->keterangan == 2){
+                                                                    }else if($value2->keterangan == 1){
                                                                         $result_normalisasi = $bobot/max($a_value_sub_kriteria[$key2]);
                                                                         echo $result_normalisasi;
                                                                     }
@@ -270,11 +270,11 @@
                                                                     $kode_gabungan = $kode_kriteria . '-' . $kode_sub_kriteria;
                                                                     $nama_sub_kriteria = get_sub_criteria_by_code_marge($kode_gabungan)['nama_sub_kriteria']; 
                                                                     
-                                                                    if($value2->keterangan == 1){
+                                                                    if($value2->keterangan == 2){
                                                                         $result_normalisasi = min($a_value_sub_kriteria[$key2])/$bobot;
                                                                         $result_prefensi = $value2->bobot * $result_normalisasi;
                                                                         echo $result_prefensi;
-                                                                    }else if($value2->keterangan == 2){
+                                                                    }else if($value2->keterangan == 1){
                                                                         $result_normalisasi = $bobot/max($a_value_sub_kriteria[$key2]);
                                                                         $result_prefensi = $value2->bobot * $result_normalisasi;
                                                                         echo $result_prefensi;
