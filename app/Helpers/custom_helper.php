@@ -300,5 +300,13 @@ function get_selection_by_id_item($id_item){
     return $data;
 }
 
+function get_rank_by_kode_seleksi_and_department_store($kode_seleksi, $kode_department_store){
+    $ratingModel = new RatingModel();
+    $data = $ratingModel->where('kode_seleksi', $kode_seleksi)
+        ->where('kode_department_store', $kode_department_store)
+        ->first();
+    return $data;
+}
+
 
 ?>

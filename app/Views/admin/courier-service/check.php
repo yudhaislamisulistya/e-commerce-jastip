@@ -247,6 +247,8 @@
                                             $a_value_prefensi = array();
                                             $index_rank = 0;
                                             $rank_result = array();
+                                            $rank_result_final = array();
+                                            $rank_result_grand_final = array();
                                             for ($i=0; $i < count(get_criterias()); $i++) { 
                                                 for ($j=$i; $j < count(get_department_store())*count(get_criterias()); $j+=count(get_criterias())) {
                                                     $a_value_sub_kriteria[$i][$j] = $a_value_department_store[$j];
@@ -288,18 +290,44 @@
                                                         $sum_value_prefensi = array_sum($a_value_prefensi[$key]);
                                                         $a_value_sum_prefensi[$key] = $sum_value_prefensi;
                                                         echo $a_value_sum_prefensi[$key];
+                                                        $a_value_department_store_final = array();
+                                                        foreach (get_department_store() as $key => $value) {
+                                                            array_push($a_value_department_store_final,$value->kode_department_store);
+                                                        }
+                                                        
+
+                                                        
                                                     ?>
                                                 </td>
                                             </tr>
                                         <?php } ?>
                                             <?php
-                                                $arr  = $a_value_sum_prefensi;
-                                                $rank = $arr;
-                                                rsort($rank);
 
-                                                foreach($arr as $key55 => $sort) {
-                                                    $rank_result[$key55] = (array_search($sort, $rank) + 1);
+
+
+
+                                                $arr  = $a_value_sum_prefensi;
+                                                $final_ranking = array_combine($a_value_department_store_final, $a_value_sum_prefensi);
+                                                $a_c_final_ranking = array_chunk($final_ranking, 1, true);
+                                                for($i = 0; $i < count(get_department_store()); $i++){
+                                                    array_push($rank_result_final, $a_c_final_ranking[$i]);
                                                 }
+
+                                                foreach (get_department_store() as $key => $value) {
+                                                    $array_new_final_ranking = [
+                                                        'kode_department_store' => $value->kode_department_store,
+                                                        'nama_department_store' => $value->nama_department_store,
+                                                        'nilai' => $rank_result_final[$key][$value->kode_department_store]
+                                                    ];
+                                                    array_push($rank_result_grand_final, $array_new_final_ranking);
+                                                }
+                                                $keys = array_column($rank_result_grand_final, 'nilai');
+                                                array_multisort($keys, SORT_DESC, $rank_result_grand_final);
+
+
+                                                // foreach($arr as $key55 => $sort) {
+                                                //     $rank_result[$key55] = (array_search($sort, $rank) + 1);
+                                                // }
                                             
                                                 
                                             ?>
@@ -319,16 +347,16 @@
                                     <tbody>
                                         <?php foreach (get_department_store() as $key => $value) { ?>
                                             <tr>
-                                                <td><?= $value->kode_department_store ?></td>
-                                                <td><?= $value->nama_department_store ?></td>
-                                                <td><?= $a_value_sum_prefensi[$key] ?></td>
+                                                <td><?= $rank_result_grand_final[$key]['kode_department_store'] ?></td>
+                                                <td><?= $rank_result_grand_final[$key]['nama_department_store'] ?></td>
+                                                <td><?= $rank_result_grand_final[$key]['nilai'] ?></td>
                                                 <td style="font-weight: bold;">
-                                                    Ranking Ke - <?= $rank_result[$key] ?>
+                                                    Ranking Ke - <?= $key+1 ?>
                                                 </td>
                                             </tr>
-                                            <input type="hidden" name="kode_department_store[<?=$key?>]" value="<?= $value->kode_department_store ?>">
-                                            <input type="hidden" name="hasil[<?=$key?>]" value="<?= $a_value_sum_prefensi[$key] ?>">
-                                            <input type="hidden" name="ranking[<?=$key?>]" value="<?= $rank_result[$key] ?>">
+                                            <input type="hidden" name="kode_department_store[<?=$key+1?>]" value="<?= $value->kode_department_store ?>">
+                                            <input type="hidden" name="hasil[<?=$key?>]" value="<?= $rank_result_grand_final[$key]['nilai'] ?>">
+                                            <input type="hidden" name="ranking[<?=$key?>]" value="<?= $key+1 ?>">
                                         <?php } ?>
                                     </tbody>
                                 </table>
