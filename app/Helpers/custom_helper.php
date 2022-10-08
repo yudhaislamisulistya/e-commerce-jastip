@@ -131,6 +131,7 @@ function get_selection_by_code_selection(){
     $selectionModel = new SelectionModel();
     $data = $selectionModel
         ->groupBy('kode_seleksi')
+        ->where('id_user', session()->get('id_user'))
         ->get()
         ->getResult();
     return $data;
